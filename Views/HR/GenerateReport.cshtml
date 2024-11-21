@@ -5,9 +5,10 @@
     ViewData["Title"] = "Generate Report";
 }
 
-<div class="container-dashboard">
+<div class="container-report">
     <h2>@ViewData["Title"]</h2>
 
+    <!-- Report Generation Form -->
     <form method="post" asp-action="GenerateReport" class="report-form">
         <div class="form-group">
             <label for="reportName">Report Name</label>
@@ -37,10 +38,10 @@
 
     <hr />
 
+    <!-- Existing Reports Section -->
     <h3>Existing Reports</h3>
 
     @if (Model.ExistingReports != null && Model.ExistingReports.Any())
-
     {
         <table class="table table-hover">
             <thead class="table-header">
@@ -54,7 +55,6 @@
             </thead>
             <tbody>
                 @foreach (var report in Model.ExistingReports)
-
                 {
                     <tr>
                         <td>@report.ReportName</td>
@@ -71,9 +71,7 @@
             </tbody>
         </table>
     }
-
     else
-
     {
         <p>No reports found for the selected date range.</p>
     }
@@ -82,7 +80,6 @@
 @section Scripts {
     <script type="text/javascript">
         @if (ViewBag.NoClaimsForDateRange != null && (bool)ViewBag.NoClaimsForDateRange)
-
         {
             <text>
                 alert("No claims found for the selected date range.");
@@ -90,3 +87,117 @@
         }
     </script>
 }
+
+<style>
+    /* General Container Styling */
+    .container-report {
+        background-color: #261132; /* Dark purple background */
+        color: #ffffff; /* White text */
+        padding: 30px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 10px;
+    }
+
+    /* Heading Style */
+    h2 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 30px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    /* Form Styling */
+    .report-form {
+        width: 100%;
+        max-width: 600px;
+        background-color: #534B58; /* Grey background */
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        margin-bottom: 40px;
+    }
+
+    /* Form Input & Select Styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+        .form-group label {
+            font-size: 1.2rem;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+
+    .form-control {
+        background-color: #261132; /* Dark purple background */
+        color: #ffffff;
+        border: 1px solid #534B58; /* Grey border */
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+    }
+
+        .form-control:focus {
+            border-color: #534B58;
+            outline: none;
+        }
+
+    /* Button Styling */
+    .btn-submit {
+        background-color: #261132;
+        color: #ffffff;
+        padding: 12px 20px;
+        text-decoration: none;
+        border-radius: 5px;
+        font-size: 1.1rem;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: background-color 0.3s ease;
+        width: 100%;
+    }
+
+        .btn-submit:hover {
+            background-color: #534B58;
+        }
+
+    /* Table Styling */
+    .table {
+        width: 100%;
+        max-width: 800px;
+        margin-top: 30px;
+        color: #ffffff;
+        background-color: #534B58;
+        border-radius: 10px;
+        overflow: hidden;
+    }
+
+    .table-header th {
+        background-color: #261132;
+        font-size: 1.1rem;
+        padding: 15px;
+    }
+
+    .table-hover tbody tr:hover {
+        background-color: #261132;
+        color: #fff;
+    }
+
+    .table tbody td {
+        padding: 15px;
+        text-align: center;
+    }
+
+    .link-view-report {
+        color: #ffffff;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
+
+        .link-view-report:hover {
+            color: #534B58;
+        }
+</style>

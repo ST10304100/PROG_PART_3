@@ -1,7 +1,7 @@
 ﻿@model PROG_PART_2.Models.DashboardViewModel
 
 <div class="container-dashboard">
-    <h1 style="color:#fff;">HR Dashboard</h1>
+    <h1>HR Dashboard</h1>
 
     <!-- Claims Processed Section -->
     <div class="dashboard-section">
@@ -54,12 +54,112 @@
         </div>
     </div>
 
-    <!-- Manaage Users Section -->
+    <!-- Manage Users Section -->
     <div class="dashboard-section">
         <div class="dashboard-card">
             <h2>Manage Users</h2>
-            <p>Manage List of users and maintian access levels</p>
+            <p>Manage List of users and maintain access levels</p>
             <a href="/ManageUsers/Index" class="btn-reports"><i class="fa fa-users" aria-hidden="true"></i> View Users</a>
         </div>
     </div>
 </div>
+
+<style>
+    /* General Dashboard Container */
+    .container-dashboard {
+        background-color: #261132; /* Dark purple background */
+        color: #ffffff; /* White text */
+        padding: 30px;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    /* Dashboard Title */
+    h1 {
+        font-size: 2.5rem;
+        font-weight: bold;
+        margin-bottom: 40px;
+        text-align: center;
+    }
+
+    /* Dashboard Section */
+    .dashboard-section {
+        width: 100%;
+        max-width: 1100px;
+        margin-bottom: 30px;
+    }
+
+    /* Individual Cards */
+    .dashboard-card {
+        background-color: #534B58; /* Grey background */
+        border-radius: 10px;
+        padding: 25px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        margin-bottom: 30px;
+    }
+
+    /* Title within cards */
+    .dashboard-card h2 {
+        font-size: 1.75rem;
+        color: #ffffff; /* White text */
+        margin-bottom: 20px;
+        text-transform: uppercase;
+    }
+
+    /* Card Content - Grid Layout */
+    .card-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 15px;
+    }
+
+    /* Individual Card Items */
+    .card-item {
+        background-color: #261132; /* Dark Purple */
+        padding: 25px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        color: #ffffff; /* White text */
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card-item h3 {
+        font-size: 2.25rem;
+        font-weight: bold;
+        margin-bottom: 15px;
+    }
+
+    .card-item p {
+        font-size: 1.2rem;
+    }
+
+    /* Hover Effects for Card Items */
+    .card-item:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Button Styling */
+    .btn-reports {
+        background-color: #261132; /* Dark purple */
+        color: #ffffff; /* White text */
+        padding: 12px 25px;
+        text-decoration: none;
+        border-radius: 5px;
+        display: inline-block;
+        margin-top: 25px;
+        font-size: 1.1rem;
+        text-align: center;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn-reports:hover {
+        background-color: #534B58; /* Grey when hovered */
+        transform: scale(1.05);
+    }
+
+</style>
