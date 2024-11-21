@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using PROG_PART_2.Data;
 using Microsoft.AspNetCore.Identity;
+using FluentValidation.AspNetCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,6 +14,13 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 builder.Services.AddDefaultIdentity<IdentityUser>().AddDefaultTokenProviders()
                .AddRoles<IdentityRole>()
                .AddEntityFrameworkStores<ApplicationDBContext>();
+
+// Add FluentValidation
+builder.Services.AddControllersWithViews()
+    .AddFluentValidation(config =>
+    {
+        config.RegisterValidatorsFromAssemblyContaining<Program>(); // Automatically register all validators in the project
+    });
 
 var app = builder.Build();
 

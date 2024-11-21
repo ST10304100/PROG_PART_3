@@ -196,7 +196,7 @@ namespace PROG_PART_2.Controllers
 
             TempData["SuccessMessage"] = "Claim submitted successfully!";
 
-            return RedirectToAction("Dashboard", "Lecturer");
+            return RedirectToAction("Claims", "Lecturer");
 
         }
 
