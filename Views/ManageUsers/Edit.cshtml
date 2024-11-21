@@ -5,24 +5,30 @@
     <form asp-action="Edit" method="post">
         <input type="hidden" asp-for="Id" />
 
+        <!-- Email Field (readonly) -->
         <div class="form-group">
             <label asp-for="Email"></label>
             <input type="email" asp-for="Email" class="form-control" readonly />
         </div>
 
+        <!-- Phone Number Field -->
         <div class="form-group">
             <label asp-for="PhoneNumber">Phone Number</label>
             <input type="text" asp-for="PhoneNumber" class="form-control" />
-            <span asp-validation-for="PhoneNumber" class="text-danger"></span> <!-- Validation error for PhoneNumber -->
+            <span asp-validation-for="PhoneNumber" class="text-danger"></span>
         </div>
 
+        <!-- Role Selection Dropdown -->
         <div class="form-group">
             <label asp-for="Role">Role</label>
             <select asp-for="Role" asp-items="@(new SelectList(Model.Roles))" class="form-control"></select>
         </div>
 
-        <button type="submit" class="btn-edit btn-primary">Update</button>
-        <a asp-action="Index" class="btn-edit btn-secondary">Cancel</a>
+        <!-- Buttons (Update and Cancel) -->
+        <div class="form-actions">
+            <button type="submit" class="btn-edit btn-primary">Update</button>
+            <a asp-action="Index" class="btn-edit btn-secondary">Cancel</a>
+        </div>
     </form>
 </div>
 
@@ -31,3 +37,97 @@
         await Html.RenderPartialAsync("_ValidationScriptsPartial");
     }
 }
+
+<style>
+    /* Container for the Edit User page */
+    .container-edit {
+        background-color: #261132; /* Dark purple background */
+        color: #ffffff; /* White text */
+        padding: 30px;
+        border-radius: 10px;
+        max-width: 800px;
+        margin: 0 auto;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Heading Styling */
+    h2 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+        text-align: center;
+        color: #ffffff;
+    }
+
+    /* Form Group Styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 1.1rem;
+        color: #ffffff;
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .form-group .form-control {
+        background-color: #534B58;
+        color: #ffffff;
+        border: 1px solid #ccc;
+        padding: 10px;
+        border-radius: 5px;
+        width: 100%;
+        font-size: 1rem;
+    }
+
+    .form-group .form-control:focus {
+        border-color: #28a745; /* Green focus border */
+        box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+    }
+
+    .form-group .text-danger {
+        font-size: 0.875rem;
+        margin-top: 5px;
+    }
+
+    /* Button Styling */
+    .btn-edit {
+        font-size: 1rem;
+        padding: 10px 20px;
+        border-radius: 5px;
+        border: none;
+        cursor: pointer;
+        transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-primary {
+        background-color: #28a745; /* Green for Update */
+        color: #fff;
+    }
+
+    .btn-primary:hover {
+        background-color: #218838;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .btn-secondary {
+        background-color: #dc3545; /* Red for Cancel */
+        color: #fff;
+        margin-left: 10px;
+    }
+
+    .btn-secondary:hover {
+        background-color: #c82333;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Form Actions Wrapper */
+    .form-actions {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    
+</style>
