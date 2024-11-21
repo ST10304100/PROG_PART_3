@@ -44,6 +44,7 @@ namespace PROG_PART_2.Controllers
             {
                 claim.IsApprovedByManager = true;
                 claim.Status = "Approved by Manager";
+                claim.PaymentStatus = "Processing";
                 await _context.SaveChangesAsync(); // Save changes to the database
             }
 
