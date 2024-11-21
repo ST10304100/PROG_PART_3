@@ -18,29 +18,29 @@ namespace PROG_PART_2.Controllers
         // Action method to display the list of roles
         public IActionResult Index()
         {
-            // Fetch all roles and pass them to the view
+            // Fetch all roles from the RoleManager and pass them to the view
             var roles = _roleManager.Roles;
-            return View(roles);
+            return View(roles); // Returns the roles to be displayed in the Index view
         }
 
         // GET method for rendering the role creation form
         [HttpGet]
         public IActionResult Create()
         {
-            return View();
+            return View(); // Renders the Create view for adding a new role
         }
 
         // POST method for creating a new role
         [HttpPost]
         public async Task<IActionResult> Create(IdentityRole model)
         {
-            // Check if the role already exists
-            if (!_roleManager.RoleExistsAsync(model.Name).GetAwaiter().GetResult())
+            // Check if the role already exists in the system
+            if (!await _roleManager.RoleExistsAsync(model.Name))
             {
-                // If the role doesn't exist, create it
-                _roleManager.CreateAsync(new IdentityRole(model.Name)).GetAwaiter().GetResult();
+                // If the role doesn't exist, create it using the RoleManager
+                await _roleManager.CreateAsync(new IdentityRole(model.Name));
             }
-            // Redirect back to the Index action after role creation
+            // Redirect back to the Index action to display the updated list of roles
             return RedirectToAction("Index");
         }
     }
