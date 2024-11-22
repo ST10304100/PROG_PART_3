@@ -24,15 +24,6 @@ This README details the development journey, features, and functionality of the 
 
 ---
 
-## Repository Contents
-The following files are included in this repository:
-- `CMCS_Tests.zip`: Unit Tests covering 15 core functionalities, including claim submission and file validation.
-- `CMCS_DB.bak`: SQL Server Database Backup for restoring the local database.
-- `CMCS_Final_Submission.pdf`: Submission document with screenshots, code samples, and attributions.
-- `CMCS.sln`: Solution file containing the complete ASP.NET Core MVC project.
-
----
-
 ## Sprints
 
 ### Sprint Part 1
