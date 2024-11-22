@@ -9,19 +9,16 @@ This README details the development journey, features, and functionality of the 
 
 ## Table of Contents
 - [Overview](#overview)
-- [Repository Contents](#repository-contents)
 - [Sprints](#sprints)
   - [Sprint Part 1](#sprint-part-1)
   - [Sprint Part 2](#sprint-part-2)
   - [Sprint Part 3 - Final Application Build](#sprint-part-3---final-application-build)
 - [Cloning the Project and Restoring the Database](#cloning-the-project-and-restoring-the-database)
 - [Assumptions for Usage](#assumptions-for-usage)
-- [Lecturer Feedback](#lecturer-feedback)
 - [Functionality and App Usage](#functionality-and-app-usage)
 - [Future Requirements](#future-requirements)
 - [Code Attribution](#code-attribution)
-- [Acknowledgements](#acknowledgements)
-
+- 
 ---
 
 ## Sprints
