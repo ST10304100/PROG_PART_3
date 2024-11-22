@@ -112,9 +112,7 @@ The following files are included in this repository:
 
 ---
 
-## Lecturer Feedback
-- No feedback was received for Parts 1 and 2 as both achieved a 100% grade.
-- Part 3 was enhanced with additional features to meet requirements, including automation and validation workflows.
+
 
 ---
 
