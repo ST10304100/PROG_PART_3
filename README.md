@@ -138,51 +138,53 @@ The following files are included in this repository:
 
 ## Code Attribution
 
-Author: w3schools
-Date Accessed: 14 October 2024
-Author: w3schools
-Date Accessed: 14 October 2024
+HTML & CSS: 
 
-Database Work:
+Author: w3schools 
 
-Author: Microsoft
-Link: Working with SQL
-Date Accessed: 15 October 2024
-LINQ and File Handling:
+Link: https://www.w3schools.com/css/ 
 
-Author: Fatima Shaik
-Link: Employee_Management_LINQ_FileHandling_G1
-Date Accessed: 15 October 2024
+Date Accessed: 15 November 2024 
 
-Database Work:
-Author: Microsoft
-Link: Working with SQL
-Date Accessed: 15 November 2024
+ 
 
-LINQ and File Handling:
-Author: Fatima Shaik
-Link: Employee_Management_LINQ_FileHandling_G1
-Date Accessed: 15 November 2024
+Fluent Validation: 
 
-Microsoft Identity Integration:
-Author: Andy Malone MVP
-Link: Microsoft Identity Tutorial
-Date Accessed: 16 November 2024
+Author: FluentValidation 
 
-PDF File Handling:
-Author: Fatima Shaik
-Link: FileHandlingApp
-Date Accessed: 16 November 2024
+Link: FluentValidation — FluentValidation documentation 
 
+Date Accessed: 16 Novemeber 2024 
 
-PDF Creating for Reports Resource:
-Author: C# Corner
-Link: GenerateReports
-Date Accessed: 13 Novemeber 2024
+ 
 
-Fluent Validation Logic:
-Author: FluentValidation
-Link: FluentValidation
-Date Accessed: 18 Novemeber 2024
+PDF File Handling: 
 
+Author: Fatima Shaik 
+
+Link: PROG6212-Group1-2024/FileHandlingApp at main · fb-shaik/PROG6212-Group1-2024 · GitHub 
+
+Date Accessed: 16 November 2024 
+
+ 
+
+LINQ and File Handling: 
+
+Author: Fatima Shaik 
+
+Link: PROG6212-Group1-2024/Employee_Management_LINQ_FileHandling_G1 at main · fb-shaik/PROG6212-Group1-2024 · GitHub 
+
+Date Accessed: 17 November 2024 
+
+ 
+
+Database: 
+
+Author: Microsoft 
+
+Link: https://learn.microsoft.com/en-us/aspnet/core/tutorials/first-mvc-app/working-with-sql?view=aspnetcore-8.0&tabs=visual-studio 
+
+Date Accessed: 17 November 2024 
+
+ 
   
